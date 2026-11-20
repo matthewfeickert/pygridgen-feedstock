@@ -1,0 +1,22 @@
+--- a/pygridgen/csa.py
++++ b/pygridgen/csa.py
+@@ -63,6 +63,8 @@
+     _libcsa_paths = [
+         ('libcsa.so', os.path.join(sys.prefix, 'lib')),
+         ('libcsa', os.path.join(sys.prefix, 'lib')),
++        # the conda-forge csa package installs Library/bin/csa.dll on Windows
++        ('csa', os.path.join(sys.prefix, 'Library', 'bin')),
+         ('libcsa.so', '/usr/local/lib'),
+         ('libcsa', '/usr/local/lib'),
+     ]
+--- a/pygridgen/grid.py
++++ b/pygridgen/grid.py
+@@ -804,6 +804,8 @@
+         libgridgen_paths = [
+             ('libgridgen.so', os.path.join(sys.prefix, 'lib')),
+             ('libgridgen', os.path.join(sys.prefix, 'lib')),
++            # the conda-forge gridgen package installs Library/bin/gridgen.dll on Windows
++            ('gridgen', os.path.join(sys.prefix, 'Library', 'bin')),
+             ('libgridgen.so', '/usr/local/lib'),
+             ('libgridgen', '/usr/local/lib'),
+         ]
