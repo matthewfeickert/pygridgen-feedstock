@@ -52,6 +52,8 @@ tests:
 
 about:
   homepage: https://pygridgen.readthedocs.io/
+  repository: https://github.com/pygridgen/pygridgen
+  documentation: https://pygridgen.readthedocs.io/
   license:  MIT
   license_file: LICENSE.txt
   summary: Python interface to gridgen by Pavel Sakov
